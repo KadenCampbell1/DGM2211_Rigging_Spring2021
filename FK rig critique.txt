@@ -1,0 +1,5 @@
+I wish the top leg control was rotated 90 degrees so when the leg was moved forward and backward it wouldn't move the control out of the side view.
+The colors of the controls are a little hard to see and differanciate.
+Gimble lock is very easy to achieve with the shoulder joints
+
+I am referencing the walk cycle from page 108.
