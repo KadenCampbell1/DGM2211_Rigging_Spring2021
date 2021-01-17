@@ -2,4 +2,7 @@ I wish the top leg control was rotated 90 degrees so when the leg was moved forw
 The colors of the controls are a little hard to see and differanciate.
 Gimble lock is very easy to achieve with the shoulder joints
 
+I like how quick and responsive the rig is.
+I like how clean the controls look. What I mean is there are not many cluddering up the model and they are where the joints bend.
+
 I am referencing the walk cycle from page 108.

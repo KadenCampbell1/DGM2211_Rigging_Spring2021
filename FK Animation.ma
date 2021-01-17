@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: FK Animation.ma
-//Last modified: Thu, Jan 14, 2021 11:57:48 PM
+//Last modified: Sat, Jan 16, 2021 08:25:15 PM
 //Codeset: 1252
 file -rdi 1 -ns "Max_Rig_FK" -rfn "Max_Rig_FKRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Xmen9/Desktop/_School/_UVU2021Spring/DGM2211 (Rigging)/Max_Rig_FK.ma";
@@ -15,21 +15,22 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
-fileInfo "UUID" "4BE40CE8-4EBA-A5DD-CFC2-F6B59F9E2FC2";
+fileInfo "UUID" "3E6C3AD6-482F-3DD7-E78D-A9BCC47B565B";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "5F5AD4A4-46B4-B292-BFD3-89A27285675F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -581.58089728103346 126.04686094937726 322.49866253095911 ;
-	setAttr ".r" -type "double3" -2.7383527293779597 629.39999999990675 0 ;
+	setAttr ".t" -type "double3" 6.3688928357583219 132.95674656777163 490.0522201343548 ;
+	setAttr ".r" -type "double3" -3.3383527192878311 1441.3999999997754 -1.8641627302943808e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F8CEB552-4BEF-1DA2-C8C5-3B834979006A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 597.68327888451893;
+	setAttr ".coi" 477.92338336447199;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" 0.99280751377420629 178.48099867536894 5.6692849984720404 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -84,14 +85,14 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "left";
 	rename -uid "0B4202CE-43AC-D63A-7AC0-458508C2734B";
-	setAttr ".t" -type "double3" -1000.1 89.632282129228898 2.3073289433128181 ;
+	setAttr ".t" -type "double3" -1000.1 108.82822295808278 -6.8911218636795155 ;
 	setAttr ".r" -type "double3" 0 -90 0 ;
 createNode camera -n "leftShape" -p "left";
 	rename -uid "9F0085A4-46B1-A02F-054D-C4BA04640A3F";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 306.39584809627848;
+	setAttr ".ow" 323.27467535870767;
 	setAttr ".imn" -type "string" "left1";
 	setAttr ".den" -type "string" "left1_depth";
 	setAttr ".man" -type "string" "left1_mask";
@@ -115,7 +116,7 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "imagePlane1";
 	rename -uid "B663B838-44A5-F83F-061A-01B66369C129";
-	setAttr ".t" -type "double3" 234.32557170853295 58.265480882842517 448.40482392007681 ;
+	setAttr ".t" -type "double3" 234.32557170853295 58.265480882842517 207.28661286804339 ;
 	setAttr ".r" -type "double3" 0 -90 0 ;
 	setAttr ".s" -type "double3" 138.83317304675199 138.83317304675199 138.83317304675199 ;
 createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
@@ -129,23 +130,23 @@ createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
 	setAttr ".h" 5.9499999999999993;
 	setAttr ".cs" -type "string" "sRGB";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "559C7A6C-4962-A8CE-3F31-AEA373D6B7DA";
+	rename -uid "7D9226D2-44B5-8FC5-E2DA-8C8C834600FD";
 	setAttr -s 8 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "B908C044-4427-107C-3AAC-0091412B157C";
+	rename -uid "088A703F-4436-DB91-06DD-EEB50CBA9624";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "31DC9913-492E-0C68-FCDE-2C8F4B06766B";
+	rename -uid "620DA003-461F-9ABF-461E-0990483A7EA3";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "D049333B-4BED-0631-1CF1-D0B7DEBD50CF";
+	rename -uid "52228B00-4A3B-1960-9AB4-44A257C77E3D";
 	setAttr ".cdl" 1;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "05F1760E-4852-A976-0096-6B86E4A760FD";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6180EFB9-46CD-9331-7502-C4B6D0BD43F8";
+	rename -uid "DFAC4873-47FA-02B5-58A9-13AE8FED43CD";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "003E78F9-4673-FB36-84C6-AF81D1479BEE";
 	setAttr ".g" yes;
@@ -155,10 +156,10 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 779\n            -height 256\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 779\n            -height 255\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"left\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
@@ -524,35 +525,35 @@ createNode reference -n "Max_Rig_FKRN";
 		"rotate" " -type \"double3\" 19.60138897862708163 -6.41666846566138727 -7.77668569175124702"
 		
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl" 
 		"rotate" " -type \"double3\" 0 -6.41666846566138727 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl" 
 		"translateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl" 
 		"rotate" " -type \"double3\" 0 -10 10"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:fingerL_Grp|Max_Rig_FK:thumbFingerL_Grp|Max_Rig_FK:thumbFingerL_Ctrl" 
 		"rotateZ" " -av 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:fingerL_Grp|Max_Rig_FK:thumbFingerL_Grp|Max_Rig_FK:thumbFingerL_Ctrl" 
@@ -656,250 +657,252 @@ createNode reference -n "Max_Rig_FKRN";
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl" 
 		"translateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl" 
 		"translateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl" 
 		"rotate" " -type \"double3\" 8.68797952905267223 -78.35776571444993976 59.8395509172439759"
 		
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 -17.63806774496723406"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 40.29493303830162176"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl" 
 		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl" 
-		"rotateZ" " -av"
-		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl" 
 		"rotateY" " -av"
+		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl" 
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl" 
 		"translateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl" 
 		"translateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl" 
 		"rotate" " -type \"double3\" 25.01072408830052751 69.57477928518578381 53.92948680938877715"
 		
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 35.87703626599878248"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl" 
 		"rotate" " -type \"double3\" 187.22840728364758434 0 -38.88736373669335933"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl" 
 		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl" 
-		"rotateZ" " -av"
-		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl" 
 		"rotateY" " -av"
+		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl" 
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl" 
 		"translateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl" 
-		"rotate" " -type \"double3\" 0 27.59574571317238068 -10.81323826667172661"
+		"rotate" " -type \"double3\" -11.09287370900638336 29.02278949918673945 -10.81323826667172838"
+		
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl" 
 		"rotate" " -type \"double3\" 0 19.15683722260368782 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl" 
 		"translateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl" 
 		"rotate" " -type \"double3\" 0 -2.3812254629451699 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl" 
 		"rotate" " -type \"double3\" 0 -47.31838026710804002 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl" 
 		"translateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl" 
-		"rotate" " -type \"double3\" 0 -37.94191883113018804 9.09402955207856856"
+		"rotate" " -type \"double3\" 8.87321362314957618 -35.12839256993318315 9.09402955207856856"
+		
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl" 
 		"rotate" " -type \"double3\" 0 8.37120317802344971 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl" 
 		"rotate" " -type \"double3\" 0 -6.55834900054495229 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl" 
 		"translateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl" 
-		"rotate" " -type \"double3\" -5.62933752928911701 0 3.03053274631577807"
+		"rotate" " -type \"double3\" -5.62933752928911701 0 10.59288142537127619"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl" 
 		"EyeControl" " -av -k 1 1"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl" 
 		"FreeOrient" " -av -k 1 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl" 
 		"FreeOrient" " -av -k 1 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl" 
 		"rotate" " -type \"double3\" 0 -18.49407227353365712 0"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl" 
 		"rotateY" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "translate" 
 		" -type \"double3\" 0 -13.09255112237033813 0"
-		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "translateZ" 
+		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "translateX" 
 		" -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "translateY" 
 		" -av"
-		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "translateX" 
+		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "translateZ" 
 		" -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "rotate" 
 		" -type \"double3\" 0 0 0"
-		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "rotateZ" 
+		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "rotateX" 
 		" -av"
 		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "rotateY" 
 		" -av"
-		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "rotateX" 
+		2 "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl" "rotateZ" 
 		" -av"
 		2 "Max_Rig_FK:headMesh" "displayOrder" " 7"
 		2 "Max_Rig_FK:smoothMesh" "displayOrder" " 9"
@@ -911,53 +914,53 @@ createNode reference -n "Max_Rig_FKRN";
 		2 "Max_Rig_FK:dummyArmL" "displayOrder" " 6"
 		2 "Max_Rig_FK:dummyLegL" "displayOrder" " 4"
 		2 "Max_Rig_FK:dummyMesh" "displayOrder" " 8"
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[1]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[2]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[3]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[4]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[5]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkTorso_Grp|Max_Rig_FK:fkTorso_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[6]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[7]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[8]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[9]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[10]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[11]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:FKCtrl_Grp|Max_Rig_FK:fkSpine_Grp|Max_Rig_FK:fkSpine_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[12]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[13]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[14]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[15]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[16]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[17]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[18]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.translateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[19]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.translateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[20]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[21]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[22]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.translateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[23]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.translateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:hip_Grp|Max_Rig_FK:hip_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[24]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:fingerL_Grp|Max_Rig_FK:thumbFingerL_Grp|Max_Rig_FK:thumbFingerL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[25]" ""
@@ -1159,377 +1162,377 @@ createNode reference -n "Max_Rig_FKRN";
 		"Max_Rig_FKRN.placeHolderList[123]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:fingerR_Grp|Max_Rig_FK:pinkyFingerR_Ctrl.Spread" 
 		"Max_Rig_FKRN.placeHolderList[124]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[125]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[126]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[127]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[128]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[129]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[130]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.translateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[131]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.translateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[132]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[133]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[134]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.translateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[135]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.translateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[136]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.translateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[137]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.translateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[138]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[139]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[140]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.translateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[141]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.translateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[142]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[143]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[144]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[145]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[146]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[147]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[148]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[149]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[150]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[151]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[152]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[153]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[154]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[155]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[156]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl.rotateZ" 
-		"Max_Rig_FKRN.placeHolderList[157]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl.rotateZ" 
-		"Max_Rig_FKRN.placeHolderList[158]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl.rotateY" 
-		"Max_Rig_FKRN.placeHolderList[159]" ""
+		"Max_Rig_FKRN.placeHolderList[157]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl.rotateY" 
+		"Max_Rig_FKRN.placeHolderList[158]" ""
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl.rotateZ" 
+		"Max_Rig_FKRN.placeHolderList[159]" ""
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleR_Grp|Max_Rig_FK:clavicleR_Ctrl|Max_Rig_FK:shoulderOrientR_Grp|Max_Rig_FK:shoulderFKR_Grp|Max_Rig_FK:shoulderFKR_Ctrl|Max_Rig_FK:elbowFKR_Grp|Max_Rig_FK:elbowFKR_Ctrl|Max_Rig_FK:wristFKR_Grp|Max_Rig_FK:wristFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[160]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[161]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[162]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[163]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[164]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[165]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[166]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.translateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[167]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.translateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[168]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[169]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[170]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.translateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[171]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.translateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[172]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.translateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[173]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.translateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[174]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[175]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[176]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.translateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[177]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.translateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[178]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[179]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[180]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[181]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[182]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[183]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[184]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[185]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[186]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[187]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[188]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[189]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[190]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[191]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[192]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl.rotateZ" 
-		"Max_Rig_FKRN.placeHolderList[193]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl.rotateZ" 
-		"Max_Rig_FKRN.placeHolderList[194]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl.rotateY" 
-		"Max_Rig_FKRN.placeHolderList[195]" ""
+		"Max_Rig_FKRN.placeHolderList[193]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl.rotateY" 
+		"Max_Rig_FKRN.placeHolderList[194]" ""
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl.rotateZ" 
+		"Max_Rig_FKRN.placeHolderList[195]" ""
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:clavicleL_Grp|Max_Rig_FK:clavicleL_Ctrl|Max_Rig_FK:shoulderOrientL_Grp|Max_Rig_FK:shoulderFKL_Grp|Max_Rig_FK:shoulderFKL_Ctrl|Max_Rig_FK:elbowLFK_Grp|Max_Rig_FK:elbowFKL_Ctrl|Max_Rig_FK:wristFKL_Grp|Max_Rig_FK:wristFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[196]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.translateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[197]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.translateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[198]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[199]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[200]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.translateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[201]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.translateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[202]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[203]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[204]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[205]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[206]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[207]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[208]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[209]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[210]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[211]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[212]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[213]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[214]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[215]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[216]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[217]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[218]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[219]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[220]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.translateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[221]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.translateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[222]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[223]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[224]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.translateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[225]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.translateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[226]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[227]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[228]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[229]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[230]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[231]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKROrient_Grp|Max_Rig_FK:legFKR_Grp|Max_Rig_FK:legFKR_Ctrl|Max_Rig_FK:kneeFKR_Grp|Max_Rig_FK:kneeFKR_Ctrl|Max_Rig_FK:footFKR_Grp|Max_Rig_FK:footFKR_Ctrl|Max_Rig_FK:toeFKR_Grp|Max_Rig_FK:toeFKR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[232]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.translateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[233]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.translateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[234]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[235]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[236]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.translateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[237]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.translateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[238]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[239]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[240]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[241]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[242]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[243]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[244]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[245]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[246]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[247]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[248]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[249]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[250]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[251]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[252]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[253]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[254]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[255]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[256]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[257]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[258]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[259]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[260]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[261]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:legFK_Grp|Max_Rig_FK:legFKLOrient_Grp|Max_Rig_FK:legFKL_Grp|Max_Rig_FK:legFKL_Ctrl|Max_Rig_FK:kneeFKL_Grp|Max_Rig_FK:kneeFKL_Ctrl|Max_Rig_FK:footFKL_Grp|Max_Rig_FK:footFKL_Ctrl|Max_Rig_FK:toeFKL_Grp|Max_Rig_FK:toeFKL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[262]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.EyeControl" 
 		"Max_Rig_FKRN.placeHolderList[263]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.EyeControl" 
 		"Max_Rig_FKRN.placeHolderList[264]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.translateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[265]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.translateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[266]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[267]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[268]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.translateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[269]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.translateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[270]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[271]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[272]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[273]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[274]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[275]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:headCtrl_Grp|Max_Rig_FK:headOrient_Grp|Max_Rig_FK:head_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[276]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.FreeOrient" 
 		"Max_Rig_FKRN.placeHolderList[277]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.FreeOrient" 
 		"Max_Rig_FKRN.placeHolderList[278]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[279]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[280]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[281]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[282]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[283]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeRLookAt_Grp|Max_Rig_FK:eyeR_Grp|Max_Rig_FK:eyeR_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[284]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.FreeOrient" 
 		"Max_Rig_FKRN.placeHolderList[285]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.FreeOrient" 
 		"Max_Rig_FKRN.placeHolderList[286]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[287]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[288]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[289]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[290]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[291]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:eyes_Grp|Max_Rig_FK:eyeLLookAt_Grp|Max_Rig_FK:eyeL_Grp|Max_Rig_FK:eyeL_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[292]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[293]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[294]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[295]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[296]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[297]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:neck_Grp|Max_Rig_FK:neck_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[298]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.translateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[299]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.translateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.translateX" 
 		"Max_Rig_FKRN.placeHolderList[300]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[301]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.translateY" 
 		"Max_Rig_FKRN.placeHolderList[302]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.translateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[303]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.translateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.translateZ" 
 		"Max_Rig_FKRN.placeHolderList[304]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.rotateZ" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[305]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.rotateZ" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.rotateX" 
 		"Max_Rig_FKRN.placeHolderList[306]" ""
 		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[307]" ""
 		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.rotateY" 
 		"Max_Rig_FKRN.placeHolderList[308]" ""
-		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.rotateX" 
+		5 3 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[309]" ""
-		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.rotateX" 
+		5 4 "Max_Rig_FKRN" "|Max_Rig_FK:all_Grp|Max_Rig_FK:controls_Grp|Max_Rig_FK:root_Ctrl.rotateZ" 
 		"Max_Rig_FKRN.placeHolderList[310]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -1718,8 +1721,7 @@ createNode animCurveTA -n "fkTorso_Ctrl_rotateZ";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 -7.776685691751247 4 -7.776685691751247
-		 7 -7.776685691751247 10 -7.776685691751247 13 -7.776685691751247 16 -7.776685691751247
-		 19 -7.776685691751247 22 -7.776685691751247 25 -7.776685691751247;
+		 7 0 10 2.7484062598687991 13 7.777000000000001 16 11.267200281980701 19 0 22 0 25 -7.776685691751247;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -1733,8 +1735,8 @@ createNode animCurveTA -n "fkTorso_Ctrl_rotateY";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 -6.4166684656613873 4 -6.4166684656613873
-		 7 -6.4166684656613873 10 -6.4166684656613873 13 -6.4166684656613873 16 -6.4166684656613873
-		 19 -6.4166684656613873 22 -6.4166684656613873 25 -6.4166684656613873;
+		 7 -6.4166684656613873 10 -3.0534836528244167 13 -6.4166684656613873 16 -6.4166684656613873
+		 19 -6.0000000000000009 22 -6.0000000000000009 25 -6.4166684656613873;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -1747,9 +1749,8 @@ createNode animCurveTA -n "fkTorso_Ctrl_rotateX";
 	rename -uid "C4966701-48FD-8093-C40F-BB8FC97D1493";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 19.601388978627082 4 19.601388978627082
-		 7 19.601388978627082 10 19.601388978627082 13 19.601388978627082 16 19.601388978627082
-		 19 19.601388978627082 22 19.601388978627082 25 19.601388978627082;
+	setAttr -s 9 ".ktv[0:8]"  1 19.601388978627082 4 26.403718110551871
+		 7 0 10 -9.3324272642905175 13 -19.601 16 -19.601 19 0 22 12.065710357922979 25 19.601388978627082;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -1803,8 +1804,8 @@ createNode animCurveTA -n "hip_Ctrl_rotateZ";
 	rename -uid "0E711DF4-426B-6A63-32BA-4ABD32655379";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 10 4 10 7 10 10 10 13 10 16 10 19 10 22 10
-		 25 10;
+	setAttr -s 9 ".ktv[0:8]"  1 10 4 14.999999999999998 7 0 10 -5.7481972813350204
+		 13 -10 16 -13.830784064846572 19 0 22 3.0269013586334621 25 10;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -1817,8 +1818,8 @@ createNode animCurveTA -n "hip_Ctrl_rotateY";
 	rename -uid "35083558-4014-D74A-0E94-D7B536860D6E";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -10 4 -10 7 -10 10 -10 13 -10 16 -10 19 -10
-		 22 -10 25 -10;
+	setAttr -s 9 ".ktv[0:8]"  1 -10 4 -11.059647760584255 7 0 10 6.1601357035749258
+		 13 10 16 10 19 10 22 1.3580231389941584 25 -10;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -1963,9 +1964,9 @@ createNode animCurveTA -n "shoulderFKR_Ctrl_rotateZ";
 	rename -uid "2BEBD509-4EEB-D554-C905-51A21DCE40F0";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 59.839550917243976 4 59.839550917243976
-		 7 59.839550917243976 10 59.839550917243976 13 59.839550917243976 16 59.839550917243976
-		 19 59.839550917243976 22 59.839550917243976 25 59.839550917243976;
+	setAttr -s 9 ".ktv[0:8]"  1 59.839550917243976 4 48.552225797066839
+		 7 84.193873293698729 10 119.85086600758281 13 114.15483255830097 16 136.73037446342178
+		 19 82.056453920016196 22 65.41325428218687 25 59.839550917243976;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -1979,8 +1980,8 @@ createNode animCurveTA -n "shoulderFKR_Ctrl_rotateY";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 -78.35776571444994 4 -78.35776571444994
-		 7 -78.35776571444994 10 -78.35776571444994 13 -78.35776571444994 16 -78.35776571444994
-		 19 -78.35776571444994 22 -78.35776571444994 25 -78.35776571444994;
+		 7 -78.35776571444994 10 -110.83789672188142 13 -118.99897018319074 16 -118.99897018319074
+		 19 -83.895990016904548 22 -83.895990016904548 25 -78.35776571444994;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -1994,8 +1995,8 @@ createNode animCurveTA -n "shoulderFKR_Ctrl_rotateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 8.6879795290526722 4 8.6879795290526722
-		 7 8.6879795290526722 10 8.6879795290526722 13 8.6879795290526722 16 8.6879795290526722
-		 19 8.6879795290526722 22 8.6879795290526722 25 8.6879795290526722;
+		 7 8.6879795290526722 10 9.7013872621895807 13 8.6879795290526722 16 8.6879795290526722
+		 19 -3.8621273497975763 22 -3.8621273497975763 25 8.6879795290526722;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -2048,7 +2049,7 @@ createNode animCurveTA -n "elbowFKR_Ctrl_rotateZ";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 -17.638067744967234 4 -17.638067744967234
-		 7 -17.638067744967234 10 -17.638067744967234 13 -17.638067744967234 16 -17.638067744967234
+		 7 -16.447771103806129 10 -52.282983550194388 13 -17.638067744967234 16 -17.638067744967234
 		 19 -17.638067744967234 22 -17.638067744967234 25 -17.638067744967234;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
@@ -2088,9 +2089,9 @@ createNode animCurveTA -n "wristFKR_Ctrl_rotateZ";
 	rename -uid "64EF6A43-44AA-9E4B-E94A-9A926F1DE63F";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 40.294933038301622 4 40.294933038301622
-		 7 40.294933038301622 10 40.294933038301622 13 40.294933038301622 16 40.294933038301622
-		 19 40.294933038301622 22 40.294933038301622 25 40.294933038301622;
+	setAttr -s 9 ".ktv[0:8]"  1 40.294933038301622 4 9.7085708923595444
+		 7 40.294933038301622 10 5.7019102991028543 13 40.294933038301622 16 40.294933038301622
+		 19 40.294933038301622 22 43.387650741908836 25 40.294933038301622;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -2207,9 +2208,9 @@ createNode animCurveTA -n "shoulderFKL_Ctrl_rotateZ";
 	rename -uid "F4E2AEF8-4BF6-E52A-A04F-72AABEF7646C";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 53.929486809388777 4 53.929486809388777
-		 7 53.929486809388777 10 53.929486809388777 13 53.929486809388777 16 53.929486809388777
-		 19 53.929486809388777 22 53.929486809388777 25 53.929486809388777;
+	setAttr -s 9 ".ktv[0:8]"  1 53.929486809388777 4 42.310849225307905
+		 7 106.20685991063321 10 119.14255982405946 13 120.00955763884379 16 130.5901192618999
+		 19 102.4081861714488 22 65.117848341384217 25 53.929486809388777;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -2223,8 +2224,8 @@ createNode animCurveTA -n "shoulderFKL_Ctrl_rotateY";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 69.574779285185784 4 69.574779285185784
-		 7 69.574779285185784 10 69.574779285185784 13 69.574779285185784 16 69.574779285185784
-		 19 69.574779285185784 22 69.574779285185784 25 69.574779285185784;
+		 7 89.151950454046244 10 99.853854119348256 13 102.74052856760585 16 103.32204430587764
+		 19 95.685938655217058 22 74.658230960345989 25 69.574779285185784;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -2238,8 +2239,8 @@ createNode animCurveTA -n "shoulderFKL_Ctrl_rotateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 25.010724088300528 4 25.010724088300528
-		 7 25.010724088300528 10 25.010724088300528 13 25.010724088300528 16 25.010724088300528
-		 19 25.010724088300528 22 25.010724088300528 25 25.010724088300528;
+		 7 -5.3415374468974148 10 -5.3415374468974148 13 5.9248844192145871 16 24.003689971459679
+		 19 -5.8495602376927014 22 -5.8495602376927014 25 25.010724088300528;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -2291,9 +2292,9 @@ createNode animCurveTA -n "elbowFKL_Ctrl_rotateZ";
 	rename -uid "1181DA61-4003-8094-1875-FDB74EBA42C0";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 35.877036265998782 4 35.877036265998782
-		 7 35.877036265998782 10 35.877036265998782 13 35.877036265998782 16 35.877036265998782
-		 19 35.877036265998782 22 35.877036265998782 25 35.877036265998782;
+	setAttr -s 9 ".ktv[0:8]"  1 35.877036265998782 4 26.27797093141702
+		 7 3.996613234997147 10 3.996613234997147 13 19.200331664374662 16 16.65011073996439
+		 19 19.200331664374662 22 49.267758044534133 25 35.877036265998782;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -2306,7 +2307,8 @@ createNode animCurveTA -n "elbowFKL_Ctrl_rotateY";
 	rename -uid "DC71368C-417F-8617-CE37-4FB27F9715D1";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 -9.8298109580838471
+		 25 0;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -2983,8 +2985,8 @@ createNode animCurveTA -n "wristFKL_Ctrl_rotateZ";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 -38.887363736693359 4 -38.887363736693359
-		 7 -38.887363736693359 10 -38.887363736693359 13 -38.887363736693359 16 -38.887363736693359
-		 19 -38.887363736693359 22 -38.887363736693359 25 -38.887363736693359;
+		 7 5.5030180258976822 10 -32.043097906304148 13 -38.887363736693359 16 -14.664913586182891
+		 19 -9.7029924548554813 22 -9.7029924548554813 25 -38.887363736693359;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3025,9 +3027,9 @@ createNode animCurveTA -n "legFKR_Ctrl_rotateZ";
 	rename -uid "0BE52268-47D4-55BD-C9EA-95A984ED1E52";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -10.813238266671727 4 -10.813238266671727
-		 7 -10.813238266671727 10 -10.813238266671727 13 -10.813238266671727 16 -10.813238266671727
-		 19 -10.813238266671727 22 -10.813238266671727 25 -10.813238266671727;
+	setAttr -s 9 ".ktv[0:8]"  1 -10.813238266671728 4 -20 7 -10.813238266671728
+		 10 -2.4251065212105014 13 8.3928578024400089 16 12.775232987875748 19 -1.186089061187851
+		 22 -3.5306069121600929 25 -10.813238266671728;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3040,9 +3042,9 @@ createNode animCurveTA -n "legFKR_Ctrl_rotateY";
 	rename -uid "97783A37-44FF-AE30-A1E3-5EA36BB13413";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 27.595745713172381 4 27.595745713172381
-		 7 27.595745713172381 10 27.595745713172381 13 27.595745713172381 16 27.595745713172381
-		 19 27.595745713172381 22 27.595745713172381 25 27.595745713172381;
+	setAttr -s 9 ".ktv[0:8]"  1 29.022789499186739 4 29.97343438877083
+		 7 -16.575105329281882 10 -34.976368545481414 13 -30.577793070967083 16 -51.055954394956316
+		 19 10.377085357827896 22 26.31231893845111 25 27.595745713172381;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3055,7 +3057,9 @@ createNode animCurveTA -n "legFKR_Ctrl_rotateX";
 	rename -uid "6F7A5362-4F5B-96B4-9789-E59BDF3FC645";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
+	setAttr -s 9 ".ktv[0:8]"  1 -11.092873709006383 4 -11 7 0 10 5.5092697669441577
+		 13 9.0248882004158197 16 9.0248882004158197 19 9.0248882004158197 22 -0.94855819561205224
+		 25 0;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3120,9 +3124,9 @@ createNode animCurveTA -n "kneeFKR_Ctrl_rotateY";
 	rename -uid "549C02FD-4BE2-8353-C8D4-059F07745840";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 19.156837222603688 4 19.156837222603688
-		 7 19.156837222603688 10 19.156837222603688 13 19.156837222603688 16 19.156837222603688
-		 19 19.156837222603688 22 19.156837222603688 25 19.156837222603688;
+	setAttr -s 9 ".ktv[0:8]"  1 19.156837222603688 4 45.229364416330256
+		 7 93.204165958982671 10 68.437751505626565 13 -0.57808951690615518 16 68.13098073780165
+		 19 -3.1949318203228456 22 -3.1949318203228456 25 19.156837222603688;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3163,9 +3167,9 @@ createNode animCurveTA -n "footFKR_Ctrl_rotateY";
 	rename -uid "264B3440-471F-926E-7426-B5B1154F0D40";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -2.3812254629451699 4 -2.3812254629451699
-		 7 -2.3812254629451699 10 -2.3812254629451699 13 -2.3812254629451699 16 -2.3812254629451699
-		 19 -2.3812254629451699 22 -2.3812254629451699 25 -2.3812254629451699;
+	setAttr -s 9 ".ktv[0:8]"  1 -2.3812254629451699 4 8.5967386943507655
+		 7 22.965035402192143 10 29.28303610911761 13 -13.264777227474466 16 -17.73324473433123
+		 19 -5.179511516549141 22 14.36372791820488 25 -2.3812254629451699;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3251,9 +3255,8 @@ createNode animCurveTA -n "toeFKR_Ctrl_rotateY";
 	rename -uid "7CBA9343-468C-1A5A-D871-01A9FFA50F46";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -47.31838026710804 4 -47.31838026710804
-		 7 -47.31838026710804 10 -47.31838026710804 13 -47.31838026710804 16 -47.31838026710804
-		 19 -47.31838026710804 22 -47.31838026710804 25 -47.31838026710804;
+	setAttr -s 9 ".ktv[0:8]"  1 -47.31838026710804 4 8.1396301479846755
+		 7 12.502818228810835 10 21.918909236270661 13 0 16 0 19 0 22 -37.25555105722497 25 -47.31838026710804;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3279,9 +3282,9 @@ createNode animCurveTA -n "legFKL_Ctrl_rotateZ";
 	rename -uid "D923CE89-444D-429A-C402-748920DAA5A7";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 9.0940295520785686 4 9.0940295520785686
-		 7 9.0940295520785686 10 9.0940295520785686 13 9.0940295520785686 16 9.0940295520785686
-		 19 9.0940295520785686 22 9.0940295520785686 25 9.0940295520785686;
+	setAttr -s 9 ".ktv[0:8]"  1 9.0940295520785686 4 14.999999999999998
+		 7 0 10 -5 13 -10.842459880165173 16 -10.842459880165173 19 -2.9850994010913152 22 -1.2850500081560972
+		 25 9.0940295520785686;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3294,9 +3297,9 @@ createNode animCurveTA -n "legFKL_Ctrl_rotateY";
 	rename -uid "08BAC5C9-474F-6B40-76C4-34B5D27308FC";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -37.941918831130188 4 -37.941918831130188
-		 7 -37.941918831130188 10 -37.941918831130188 13 -37.941918831130188 16 -37.941918831130188
-		 19 -37.941918831130188 22 -37.941918831130188 25 -37.941918831130188;
+	setAttr -s 9 ".ktv[0:8]"  1 -35.128392569933183 4 -49.577597656404706
+		 7 8.376102449932656 10 22.84708399161639 13 31.090618048669537 16 37.334112685386394
+		 19 -19.62664161075908 22 -40.164874831473092 25 -37.941918831130188;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3309,7 +3312,9 @@ createNode animCurveTA -n "legFKL_Ctrl_rotateX";
 	rename -uid "AC222E71-4F71-F402-24D4-79A5265D6DA4";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
+	setAttr -s 9 ".ktv[0:8]"  1 8.8732136231495762 4 11 7 0 10 -7.9445574988247998
+		 13 -12.947865233299197 16 -12.947865233299197 19 -12.947865233299197 22 -0.77439577191896758
+		 25 0;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3506,9 +3511,9 @@ createNode animCurveTL -n "root_Ctrl_translateY";
 	rename -uid "A72355DE-4D44-F85B-1650-4A9430AD4AFB";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -13.092551122370338 4 -13.092551122370338
-		 7 -13.092551122370338 10 -13.092551122370338 13 -13.092551122370338 16 -13.092551122370338
-		 19 -13.092551122370338 22 -13.092551122370338 25 -13.092551122370338;
+	setAttr -s 9 ".ktv[0:8]"  1 -13.092551122370338 4 -23.126808958596655
+		 7 -1.3232091969549202 10 0.5967235015253749 13 -13.092551122370338 16 -23.816712021516423
+		 19 -1.4557141690650468 22 -1.4557141690650468 25 -13.092551122370338;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3547,9 +3552,9 @@ createNode animCurveTA -n "kneeFKL_Ctrl_rotateY";
 	rename -uid "3B718BFE-4C43-7AC3-1892-8287C3BA296B";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 8.3712031780234497 4 8.3712031780234497
-		 7 8.3712031780234497 10 8.3712031780234497 13 8.3712031780234497 16 8.3712031780234497
-		 19 8.3712031780234497 22 8.3712031780234497 25 8.3712031780234497;
+	setAttr -s 9 ".ktv[0:8]"  1 8.3712031780234497 4 65.495616654894448
+		 7 -1.5278475105712255 10 -1.5278475105712255 13 18.206840951771508 16 34.808184872554278
+		 19 92.142399695059268 22 75.631683343322962 25 8.3712031780234497;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3588,9 +3593,9 @@ createNode animCurveTA -n "footFKL_Ctrl_rotateY";
 	rename -uid "B2845C6B-455E-9C93-56AA-7B9B2F702C3E";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -6.5583490005449523 4 -6.5583490005449523
-		 7 -6.5583490005449523 10 -6.5583490005449523 13 -6.5583490005449523 16 -6.5583490005449523
-		 19 -6.5583490005449523 22 -6.5583490005449523 25 -6.5583490005449523;
+	setAttr -s 9 ".ktv[0:8]"  1 -6.5583490005449523 4 -18.197377097118554
+		 7 -5.8637314750349487 10 21.544120101198633 13 10.796492398834607 16 22.832993932070849
+		 19 26.412718386051235 22 30.998316568703203 25 -6.5583490005449523;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3631,7 +3636,8 @@ createNode animCurveTA -n "toeFKL_Ctrl_rotateY";
 	rename -uid "3A76F1A0-4EA6-849D-F6EE-F59CD54B0E38";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 -43.506537041483696 13 -59.448948607361665
+		 16 14.484700205348581 19 16.39067857411586 22 20.734726411424099 25 0;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3666,9 +3672,8 @@ createNode animCurveTA -n "head_Ctrl_rotateZ";
 	rename -uid "05B283DB-4641-8291-9B49-B2A1E055E039";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 3.0305327463157781 4 3.0305327463157781
-		 7 3.0305327463157781 10 3.0305327463157781 13 3.0305327463157781 16 3.0305327463157781
-		 19 3.0305327463157781 22 3.0305327463157781 25 3.0305327463157781;
+	setAttr -s 9 ".ktv[0:8]"  1 10.592881425371276 4 10.593 7 0 10 -4.1606918622562139
+		 13 -9.8829034054918541 16 -11.58296465022676 19 0 22 3.479648052685596 25 10.593;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3681,7 +3686,9 @@ createNode animCurveTA -n "head_Ctrl_rotateY";
 	rename -uid "C24619DE-4389-983B-96A7-E488358409BC";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 -6.1425584194047129 7 19.180329499031703
+		 10 29.613126520792648 13 39.607280987979735 16 41.303965931736371 19 17.316191905777426
+		 22 6.6919989380965443 25 0;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3694,9 +3701,9 @@ createNode animCurveTA -n "head_Ctrl_rotateX";
 	rename -uid "7FE6C2A9-4651-C8D5-2543-28A70C59A0A9";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 -5.629337529289117 4 -5.629337529289117
+	setAttr -s 9 ".ktv[0:8]"  1 -5.629337529289117 4 -4.4813387233937272
 		 7 -5.629337529289117 10 -5.629337529289117 13 -5.629337529289117 16 -5.629337529289117
-		 19 -5.629337529289117 22 -5.629337529289117 25 -5.629337529289117;
+		 19 -8.6152927854374521 22 -8.6152927854374521 25 -5.629337529289117;
 	setAttr -s 9 ".kit[0:8]"  10 1 1 1 1 1 1 1 
 		1;
 	setAttr -s 9 ".kot[0:8]"  10 1 1 1 1 1 1 1 
@@ -3843,31 +3850,31 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :characterPartition;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
-connectAttr "Max_Rig_FKRN.phl[1]" "BaseCharacterSet.dnsm[0]";
-connectAttr "BaseCharacterSet.av[1]" "Max_Rig_FKRN.phl[2]";
+	setAttr -s 2 ".sol";
+connectAttr "Max_Rig_FKRN.phl[1]" "BaseCharacterSet.dnsm[2]";
+connectAttr "BaseCharacterSet.av[3]" "Max_Rig_FKRN.phl[2]";
 connectAttr "Max_Rig_FKRN.phl[3]" "BaseCharacterSet.dnsm[1]";
 connectAttr "BaseCharacterSet.av[2]" "Max_Rig_FKRN.phl[4]";
-connectAttr "Max_Rig_FKRN.phl[5]" "BaseCharacterSet.dnsm[2]";
-connectAttr "BaseCharacterSet.av[3]" "Max_Rig_FKRN.phl[6]";
-connectAttr "Max_Rig_FKRN.phl[7]" "BaseCharacterSet.dnsm[3]";
-connectAttr "BaseCharacterSet.av[4]" "Max_Rig_FKRN.phl[8]";
+connectAttr "Max_Rig_FKRN.phl[5]" "BaseCharacterSet.dnsm[0]";
+connectAttr "BaseCharacterSet.av[1]" "Max_Rig_FKRN.phl[6]";
+connectAttr "Max_Rig_FKRN.phl[7]" "BaseCharacterSet.dnsm[5]";
+connectAttr "BaseCharacterSet.av[6]" "Max_Rig_FKRN.phl[8]";
 connectAttr "Max_Rig_FKRN.phl[9]" "BaseCharacterSet.dnsm[4]";
 connectAttr "BaseCharacterSet.av[5]" "Max_Rig_FKRN.phl[10]";
-connectAttr "Max_Rig_FKRN.phl[11]" "BaseCharacterSet.dnsm[5]";
-connectAttr "BaseCharacterSet.av[6]" "Max_Rig_FKRN.phl[12]";
-connectAttr "Max_Rig_FKRN.phl[13]" "BaseCharacterSet.dnsm[6]";
-connectAttr "BaseCharacterSet.av[7]" "Max_Rig_FKRN.phl[14]";
+connectAttr "Max_Rig_FKRN.phl[11]" "BaseCharacterSet.dnsm[3]";
+connectAttr "BaseCharacterSet.av[4]" "Max_Rig_FKRN.phl[12]";
+connectAttr "Max_Rig_FKRN.phl[13]" "BaseCharacterSet.dnsm[8]";
+connectAttr "BaseCharacterSet.av[9]" "Max_Rig_FKRN.phl[14]";
 connectAttr "Max_Rig_FKRN.phl[15]" "BaseCharacterSet.dnsm[7]";
 connectAttr "BaseCharacterSet.av[8]" "Max_Rig_FKRN.phl[16]";
-connectAttr "Max_Rig_FKRN.phl[17]" "BaseCharacterSet.dnsm[8]";
-connectAttr "BaseCharacterSet.av[9]" "Max_Rig_FKRN.phl[18]";
-connectAttr "Max_Rig_FKRN.phl[19]" "BaseCharacterSet.dnsm[9]";
-connectAttr "BaseCharacterSet.lv[1]" "Max_Rig_FKRN.phl[20]";
+connectAttr "Max_Rig_FKRN.phl[17]" "BaseCharacterSet.dnsm[6]";
+connectAttr "BaseCharacterSet.av[7]" "Max_Rig_FKRN.phl[18]";
+connectAttr "Max_Rig_FKRN.phl[19]" "BaseCharacterSet.dnsm[11]";
+connectAttr "BaseCharacterSet.lv[3]" "Max_Rig_FKRN.phl[20]";
 connectAttr "Max_Rig_FKRN.phl[21]" "BaseCharacterSet.dnsm[10]";
 connectAttr "BaseCharacterSet.lv[2]" "Max_Rig_FKRN.phl[22]";
-connectAttr "Max_Rig_FKRN.phl[23]" "BaseCharacterSet.dnsm[11]";
-connectAttr "BaseCharacterSet.lv[3]" "Max_Rig_FKRN.phl[24]";
+connectAttr "Max_Rig_FKRN.phl[23]" "BaseCharacterSet.dnsm[9]";
+connectAttr "BaseCharacterSet.lv[1]" "Max_Rig_FKRN.phl[24]";
 connectAttr "Max_Rig_FKRN.phl[25]" "BaseCharacterSet.dnsm[49]";
 connectAttr "BaseCharacterSet.av[31]" "Max_Rig_FKRN.phl[26]";
 connectAttr "Max_Rig_FKRN.phl[27]" "BaseCharacterSet.dnsm[46]";
@@ -3968,192 +3975,192 @@ connectAttr "Max_Rig_FKRN.phl[121]" "BaseCharacterSet.dnsm[91]";
 connectAttr "BaseCharacterSet.uv[38]" "Max_Rig_FKRN.phl[122]";
 connectAttr "Max_Rig_FKRN.phl[123]" "BaseCharacterSet.dnsm[90]";
 connectAttr "BaseCharacterSet.uv[37]" "Max_Rig_FKRN.phl[124]";
-connectAttr "Max_Rig_FKRN.phl[125]" "BaseCharacterSet.dnsm[12]";
-connectAttr "BaseCharacterSet.av[10]" "Max_Rig_FKRN.phl[126]";
+connectAttr "Max_Rig_FKRN.phl[125]" "BaseCharacterSet.dnsm[14]";
+connectAttr "BaseCharacterSet.av[12]" "Max_Rig_FKRN.phl[126]";
 connectAttr "Max_Rig_FKRN.phl[127]" "BaseCharacterSet.dnsm[13]";
 connectAttr "BaseCharacterSet.av[11]" "Max_Rig_FKRN.phl[128]";
-connectAttr "Max_Rig_FKRN.phl[129]" "BaseCharacterSet.dnsm[14]";
-connectAttr "BaseCharacterSet.av[12]" "Max_Rig_FKRN.phl[130]";
-connectAttr "Max_Rig_FKRN.phl[131]" "BaseCharacterSet.dnsm[15]";
-connectAttr "BaseCharacterSet.lv[4]" "Max_Rig_FKRN.phl[132]";
+connectAttr "Max_Rig_FKRN.phl[129]" "BaseCharacterSet.dnsm[12]";
+connectAttr "BaseCharacterSet.av[10]" "Max_Rig_FKRN.phl[130]";
+connectAttr "Max_Rig_FKRN.phl[131]" "BaseCharacterSet.dnsm[17]";
+connectAttr "BaseCharacterSet.lv[6]" "Max_Rig_FKRN.phl[132]";
 connectAttr "Max_Rig_FKRN.phl[133]" "BaseCharacterSet.dnsm[16]";
 connectAttr "BaseCharacterSet.lv[5]" "Max_Rig_FKRN.phl[134]";
-connectAttr "Max_Rig_FKRN.phl[135]" "BaseCharacterSet.dnsm[17]";
-connectAttr "BaseCharacterSet.lv[6]" "Max_Rig_FKRN.phl[136]";
-connectAttr "Max_Rig_FKRN.phl[137]" "BaseCharacterSet.dnsm[21]";
-connectAttr "BaseCharacterSet.lv[7]" "Max_Rig_FKRN.phl[138]";
+connectAttr "Max_Rig_FKRN.phl[135]" "BaseCharacterSet.dnsm[15]";
+connectAttr "BaseCharacterSet.lv[4]" "Max_Rig_FKRN.phl[136]";
+connectAttr "Max_Rig_FKRN.phl[137]" "BaseCharacterSet.dnsm[23]";
+connectAttr "BaseCharacterSet.lv[9]" "Max_Rig_FKRN.phl[138]";
 connectAttr "Max_Rig_FKRN.phl[139]" "BaseCharacterSet.dnsm[22]";
 connectAttr "BaseCharacterSet.lv[8]" "Max_Rig_FKRN.phl[140]";
-connectAttr "Max_Rig_FKRN.phl[141]" "BaseCharacterSet.dnsm[23]";
-connectAttr "BaseCharacterSet.lv[9]" "Max_Rig_FKRN.phl[142]";
-connectAttr "Max_Rig_FKRN.phl[143]" "BaseCharacterSet.dnsm[18]";
-connectAttr "BaseCharacterSet.av[13]" "Max_Rig_FKRN.phl[144]";
+connectAttr "Max_Rig_FKRN.phl[141]" "BaseCharacterSet.dnsm[21]";
+connectAttr "BaseCharacterSet.lv[7]" "Max_Rig_FKRN.phl[142]";
+connectAttr "Max_Rig_FKRN.phl[143]" "BaseCharacterSet.dnsm[20]";
+connectAttr "BaseCharacterSet.av[15]" "Max_Rig_FKRN.phl[144]";
 connectAttr "Max_Rig_FKRN.phl[145]" "BaseCharacterSet.dnsm[19]";
 connectAttr "BaseCharacterSet.av[14]" "Max_Rig_FKRN.phl[146]";
-connectAttr "Max_Rig_FKRN.phl[147]" "BaseCharacterSet.dnsm[20]";
-connectAttr "BaseCharacterSet.av[15]" "Max_Rig_FKRN.phl[148]";
-connectAttr "Max_Rig_FKRN.phl[149]" "BaseCharacterSet.dnsm[24]";
-connectAttr "BaseCharacterSet.av[16]" "Max_Rig_FKRN.phl[150]";
+connectAttr "Max_Rig_FKRN.phl[147]" "BaseCharacterSet.dnsm[18]";
+connectAttr "BaseCharacterSet.av[13]" "Max_Rig_FKRN.phl[148]";
+connectAttr "Max_Rig_FKRN.phl[149]" "BaseCharacterSet.dnsm[26]";
+connectAttr "BaseCharacterSet.av[18]" "Max_Rig_FKRN.phl[150]";
 connectAttr "Max_Rig_FKRN.phl[151]" "BaseCharacterSet.dnsm[25]";
 connectAttr "BaseCharacterSet.av[17]" "Max_Rig_FKRN.phl[152]";
-connectAttr "Max_Rig_FKRN.phl[153]" "BaseCharacterSet.dnsm[26]";
-connectAttr "BaseCharacterSet.av[18]" "Max_Rig_FKRN.phl[154]";
+connectAttr "Max_Rig_FKRN.phl[153]" "BaseCharacterSet.dnsm[24]";
+connectAttr "BaseCharacterSet.av[16]" "Max_Rig_FKRN.phl[154]";
 connectAttr "Max_Rig_FKRN.phl[155]" "BaseCharacterSet.dnsm[29]";
 connectAttr "BaseCharacterSet.av[21]" "Max_Rig_FKRN.phl[156]";
-connectAttr "Max_Rig_FKRN.phl[157]" "BaseCharacterSet.dnsm[27]";
-connectAttr "BaseCharacterSet.av[19]" "Max_Rig_FKRN.phl[158]";
-connectAttr "Max_Rig_FKRN.phl[159]" "BaseCharacterSet.dnsm[28]";
-connectAttr "BaseCharacterSet.av[20]" "Max_Rig_FKRN.phl[160]";
-connectAttr "Max_Rig_FKRN.phl[161]" "BaseCharacterSet.dnsm[30]";
-connectAttr "BaseCharacterSet.av[22]" "Max_Rig_FKRN.phl[162]";
+connectAttr "Max_Rig_FKRN.phl[157]" "BaseCharacterSet.dnsm[28]";
+connectAttr "BaseCharacterSet.av[20]" "Max_Rig_FKRN.phl[158]";
+connectAttr "Max_Rig_FKRN.phl[159]" "BaseCharacterSet.dnsm[27]";
+connectAttr "BaseCharacterSet.av[19]" "Max_Rig_FKRN.phl[160]";
+connectAttr "Max_Rig_FKRN.phl[161]" "BaseCharacterSet.dnsm[32]";
+connectAttr "BaseCharacterSet.av[24]" "Max_Rig_FKRN.phl[162]";
 connectAttr "Max_Rig_FKRN.phl[163]" "BaseCharacterSet.dnsm[31]";
 connectAttr "BaseCharacterSet.av[23]" "Max_Rig_FKRN.phl[164]";
-connectAttr "Max_Rig_FKRN.phl[165]" "BaseCharacterSet.dnsm[32]";
-connectAttr "BaseCharacterSet.av[24]" "Max_Rig_FKRN.phl[166]";
-connectAttr "Max_Rig_FKRN.phl[167]" "BaseCharacterSet.dnsm[33]";
-connectAttr "BaseCharacterSet.lv[10]" "Max_Rig_FKRN.phl[168]";
+connectAttr "Max_Rig_FKRN.phl[165]" "BaseCharacterSet.dnsm[30]";
+connectAttr "BaseCharacterSet.av[22]" "Max_Rig_FKRN.phl[166]";
+connectAttr "Max_Rig_FKRN.phl[167]" "BaseCharacterSet.dnsm[35]";
+connectAttr "BaseCharacterSet.lv[12]" "Max_Rig_FKRN.phl[168]";
 connectAttr "Max_Rig_FKRN.phl[169]" "BaseCharacterSet.dnsm[34]";
 connectAttr "BaseCharacterSet.lv[11]" "Max_Rig_FKRN.phl[170]";
-connectAttr "Max_Rig_FKRN.phl[171]" "BaseCharacterSet.dnsm[35]";
-connectAttr "BaseCharacterSet.lv[12]" "Max_Rig_FKRN.phl[172]";
-connectAttr "Max_Rig_FKRN.phl[173]" "BaseCharacterSet.dnsm[39]";
-connectAttr "BaseCharacterSet.lv[13]" "Max_Rig_FKRN.phl[174]";
+connectAttr "Max_Rig_FKRN.phl[171]" "BaseCharacterSet.dnsm[33]";
+connectAttr "BaseCharacterSet.lv[10]" "Max_Rig_FKRN.phl[172]";
+connectAttr "Max_Rig_FKRN.phl[173]" "BaseCharacterSet.dnsm[41]";
+connectAttr "BaseCharacterSet.lv[15]" "Max_Rig_FKRN.phl[174]";
 connectAttr "Max_Rig_FKRN.phl[175]" "BaseCharacterSet.dnsm[40]";
 connectAttr "BaseCharacterSet.lv[14]" "Max_Rig_FKRN.phl[176]";
-connectAttr "Max_Rig_FKRN.phl[177]" "BaseCharacterSet.dnsm[41]";
-connectAttr "BaseCharacterSet.lv[15]" "Max_Rig_FKRN.phl[178]";
-connectAttr "Max_Rig_FKRN.phl[179]" "BaseCharacterSet.dnsm[36]";
-connectAttr "BaseCharacterSet.av[25]" "Max_Rig_FKRN.phl[180]";
+connectAttr "Max_Rig_FKRN.phl[177]" "BaseCharacterSet.dnsm[39]";
+connectAttr "BaseCharacterSet.lv[13]" "Max_Rig_FKRN.phl[178]";
+connectAttr "Max_Rig_FKRN.phl[179]" "BaseCharacterSet.dnsm[38]";
+connectAttr "BaseCharacterSet.av[27]" "Max_Rig_FKRN.phl[180]";
 connectAttr "Max_Rig_FKRN.phl[181]" "BaseCharacterSet.dnsm[37]";
 connectAttr "BaseCharacterSet.av[26]" "Max_Rig_FKRN.phl[182]";
-connectAttr "Max_Rig_FKRN.phl[183]" "BaseCharacterSet.dnsm[38]";
-connectAttr "BaseCharacterSet.av[27]" "Max_Rig_FKRN.phl[184]";
-connectAttr "Max_Rig_FKRN.phl[185]" "BaseCharacterSet.dnsm[42]";
-connectAttr "BaseCharacterSet.av[28]" "Max_Rig_FKRN.phl[186]";
+connectAttr "Max_Rig_FKRN.phl[183]" "BaseCharacterSet.dnsm[36]";
+connectAttr "BaseCharacterSet.av[25]" "Max_Rig_FKRN.phl[184]";
+connectAttr "Max_Rig_FKRN.phl[185]" "BaseCharacterSet.dnsm[44]";
+connectAttr "BaseCharacterSet.av[30]" "Max_Rig_FKRN.phl[186]";
 connectAttr "Max_Rig_FKRN.phl[187]" "BaseCharacterSet.dnsm[43]";
 connectAttr "BaseCharacterSet.av[29]" "Max_Rig_FKRN.phl[188]";
-connectAttr "Max_Rig_FKRN.phl[189]" "BaseCharacterSet.dnsm[44]";
-connectAttr "BaseCharacterSet.av[30]" "Max_Rig_FKRN.phl[190]";
+connectAttr "Max_Rig_FKRN.phl[189]" "BaseCharacterSet.dnsm[42]";
+connectAttr "BaseCharacterSet.av[28]" "Max_Rig_FKRN.phl[190]";
 connectAttr "Max_Rig_FKRN.phl[191]" "BaseCharacterSet.dnsm[97]";
 connectAttr "BaseCharacterSet.av[43]" "Max_Rig_FKRN.phl[192]";
-connectAttr "Max_Rig_FKRN.phl[193]" "BaseCharacterSet.dnsm[95]";
-connectAttr "BaseCharacterSet.av[41]" "Max_Rig_FKRN.phl[194]";
-connectAttr "Max_Rig_FKRN.phl[195]" "BaseCharacterSet.dnsm[96]";
-connectAttr "BaseCharacterSet.av[42]" "Max_Rig_FKRN.phl[196]";
-connectAttr "Max_Rig_FKRN.phl[197]" "BaseCharacterSet.dnsm[101]";
-connectAttr "BaseCharacterSet.lv[16]" "Max_Rig_FKRN.phl[198]";
+connectAttr "Max_Rig_FKRN.phl[193]" "BaseCharacterSet.dnsm[96]";
+connectAttr "BaseCharacterSet.av[42]" "Max_Rig_FKRN.phl[194]";
+connectAttr "Max_Rig_FKRN.phl[195]" "BaseCharacterSet.dnsm[95]";
+connectAttr "BaseCharacterSet.av[41]" "Max_Rig_FKRN.phl[196]";
+connectAttr "Max_Rig_FKRN.phl[197]" "BaseCharacterSet.dnsm[103]";
+connectAttr "BaseCharacterSet.lv[18]" "Max_Rig_FKRN.phl[198]";
 connectAttr "Max_Rig_FKRN.phl[199]" "BaseCharacterSet.dnsm[102]";
 connectAttr "BaseCharacterSet.lv[17]" "Max_Rig_FKRN.phl[200]";
-connectAttr "Max_Rig_FKRN.phl[201]" "BaseCharacterSet.dnsm[103]";
-connectAttr "BaseCharacterSet.lv[18]" "Max_Rig_FKRN.phl[202]";
-connectAttr "Max_Rig_FKRN.phl[203]" "BaseCharacterSet.dnsm[98]";
-connectAttr "BaseCharacterSet.av[44]" "Max_Rig_FKRN.phl[204]";
+connectAttr "Max_Rig_FKRN.phl[201]" "BaseCharacterSet.dnsm[101]";
+connectAttr "BaseCharacterSet.lv[16]" "Max_Rig_FKRN.phl[202]";
+connectAttr "Max_Rig_FKRN.phl[203]" "BaseCharacterSet.dnsm[100]";
+connectAttr "BaseCharacterSet.av[46]" "Max_Rig_FKRN.phl[204]";
 connectAttr "Max_Rig_FKRN.phl[205]" "BaseCharacterSet.dnsm[99]";
 connectAttr "BaseCharacterSet.av[45]" "Max_Rig_FKRN.phl[206]";
-connectAttr "Max_Rig_FKRN.phl[207]" "BaseCharacterSet.dnsm[100]";
-connectAttr "BaseCharacterSet.av[46]" "Max_Rig_FKRN.phl[208]";
-connectAttr "Max_Rig_FKRN.phl[209]" "BaseCharacterSet.dnsm[104]";
-connectAttr "BaseCharacterSet.av[47]" "Max_Rig_FKRN.phl[210]";
+connectAttr "Max_Rig_FKRN.phl[207]" "BaseCharacterSet.dnsm[98]";
+connectAttr "BaseCharacterSet.av[44]" "Max_Rig_FKRN.phl[208]";
+connectAttr "Max_Rig_FKRN.phl[209]" "BaseCharacterSet.dnsm[106]";
+connectAttr "BaseCharacterSet.av[49]" "Max_Rig_FKRN.phl[210]";
 connectAttr "Max_Rig_FKRN.phl[211]" "BaseCharacterSet.dnsm[105]";
 connectAttr "BaseCharacterSet.av[48]" "Max_Rig_FKRN.phl[212]";
-connectAttr "Max_Rig_FKRN.phl[213]" "BaseCharacterSet.dnsm[106]";
-connectAttr "BaseCharacterSet.av[49]" "Max_Rig_FKRN.phl[214]";
-connectAttr "Max_Rig_FKRN.phl[215]" "BaseCharacterSet.dnsm[107]";
-connectAttr "BaseCharacterSet.av[50]" "Max_Rig_FKRN.phl[216]";
+connectAttr "Max_Rig_FKRN.phl[213]" "BaseCharacterSet.dnsm[104]";
+connectAttr "BaseCharacterSet.av[47]" "Max_Rig_FKRN.phl[214]";
+connectAttr "Max_Rig_FKRN.phl[215]" "BaseCharacterSet.dnsm[109]";
+connectAttr "BaseCharacterSet.av[52]" "Max_Rig_FKRN.phl[216]";
 connectAttr "Max_Rig_FKRN.phl[217]" "BaseCharacterSet.dnsm[108]";
 connectAttr "BaseCharacterSet.av[51]" "Max_Rig_FKRN.phl[218]";
-connectAttr "Max_Rig_FKRN.phl[219]" "BaseCharacterSet.dnsm[109]";
-connectAttr "BaseCharacterSet.av[52]" "Max_Rig_FKRN.phl[220]";
-connectAttr "Max_Rig_FKRN.phl[221]" "BaseCharacterSet.dnsm[110]";
-connectAttr "BaseCharacterSet.lv[19]" "Max_Rig_FKRN.phl[222]";
+connectAttr "Max_Rig_FKRN.phl[219]" "BaseCharacterSet.dnsm[107]";
+connectAttr "BaseCharacterSet.av[50]" "Max_Rig_FKRN.phl[220]";
+connectAttr "Max_Rig_FKRN.phl[221]" "BaseCharacterSet.dnsm[112]";
+connectAttr "BaseCharacterSet.lv[21]" "Max_Rig_FKRN.phl[222]";
 connectAttr "Max_Rig_FKRN.phl[223]" "BaseCharacterSet.dnsm[111]";
 connectAttr "BaseCharacterSet.lv[20]" "Max_Rig_FKRN.phl[224]";
-connectAttr "Max_Rig_FKRN.phl[225]" "BaseCharacterSet.dnsm[112]";
-connectAttr "BaseCharacterSet.lv[21]" "Max_Rig_FKRN.phl[226]";
-connectAttr "Max_Rig_FKRN.phl[227]" "BaseCharacterSet.dnsm[113]";
-connectAttr "BaseCharacterSet.av[53]" "Max_Rig_FKRN.phl[228]";
+connectAttr "Max_Rig_FKRN.phl[225]" "BaseCharacterSet.dnsm[110]";
+connectAttr "BaseCharacterSet.lv[19]" "Max_Rig_FKRN.phl[226]";
+connectAttr "Max_Rig_FKRN.phl[227]" "BaseCharacterSet.dnsm[115]";
+connectAttr "BaseCharacterSet.av[55]" "Max_Rig_FKRN.phl[228]";
 connectAttr "Max_Rig_FKRN.phl[229]" "BaseCharacterSet.dnsm[114]";
 connectAttr "BaseCharacterSet.av[54]" "Max_Rig_FKRN.phl[230]";
-connectAttr "Max_Rig_FKRN.phl[231]" "BaseCharacterSet.dnsm[115]";
-connectAttr "BaseCharacterSet.av[55]" "Max_Rig_FKRN.phl[232]";
-connectAttr "Max_Rig_FKRN.phl[233]" "BaseCharacterSet.dnsm[119]";
-connectAttr "BaseCharacterSet.lv[22]" "Max_Rig_FKRN.phl[234]";
+connectAttr "Max_Rig_FKRN.phl[231]" "BaseCharacterSet.dnsm[113]";
+connectAttr "BaseCharacterSet.av[53]" "Max_Rig_FKRN.phl[232]";
+connectAttr "Max_Rig_FKRN.phl[233]" "BaseCharacterSet.dnsm[121]";
+connectAttr "BaseCharacterSet.lv[24]" "Max_Rig_FKRN.phl[234]";
 connectAttr "Max_Rig_FKRN.phl[235]" "BaseCharacterSet.dnsm[120]";
 connectAttr "BaseCharacterSet.lv[23]" "Max_Rig_FKRN.phl[236]";
-connectAttr "Max_Rig_FKRN.phl[237]" "BaseCharacterSet.dnsm[121]";
-connectAttr "BaseCharacterSet.lv[24]" "Max_Rig_FKRN.phl[238]";
-connectAttr "Max_Rig_FKRN.phl[239]" "BaseCharacterSet.dnsm[116]";
-connectAttr "BaseCharacterSet.av[56]" "Max_Rig_FKRN.phl[240]";
+connectAttr "Max_Rig_FKRN.phl[237]" "BaseCharacterSet.dnsm[119]";
+connectAttr "BaseCharacterSet.lv[22]" "Max_Rig_FKRN.phl[238]";
+connectAttr "Max_Rig_FKRN.phl[239]" "BaseCharacterSet.dnsm[118]";
+connectAttr "BaseCharacterSet.av[58]" "Max_Rig_FKRN.phl[240]";
 connectAttr "Max_Rig_FKRN.phl[241]" "BaseCharacterSet.dnsm[117]";
 connectAttr "BaseCharacterSet.av[57]" "Max_Rig_FKRN.phl[242]";
-connectAttr "Max_Rig_FKRN.phl[243]" "BaseCharacterSet.dnsm[118]";
-connectAttr "BaseCharacterSet.av[58]" "Max_Rig_FKRN.phl[244]";
-connectAttr "Max_Rig_FKRN.phl[245]" "BaseCharacterSet.dnsm[135]";
-connectAttr "BaseCharacterSet.av[68]" "Max_Rig_FKRN.phl[246]";
+connectAttr "Max_Rig_FKRN.phl[243]" "BaseCharacterSet.dnsm[116]";
+connectAttr "BaseCharacterSet.av[56]" "Max_Rig_FKRN.phl[244]";
+connectAttr "Max_Rig_FKRN.phl[245]" "BaseCharacterSet.dnsm[137]";
+connectAttr "BaseCharacterSet.av[70]" "Max_Rig_FKRN.phl[246]";
 connectAttr "Max_Rig_FKRN.phl[247]" "BaseCharacterSet.dnsm[136]";
 connectAttr "BaseCharacterSet.av[69]" "Max_Rig_FKRN.phl[248]";
-connectAttr "Max_Rig_FKRN.phl[249]" "BaseCharacterSet.dnsm[137]";
-connectAttr "BaseCharacterSet.av[70]" "Max_Rig_FKRN.phl[250]";
-connectAttr "Max_Rig_FKRN.phl[251]" "BaseCharacterSet.dnsm[138]";
-connectAttr "BaseCharacterSet.av[71]" "Max_Rig_FKRN.phl[252]";
+connectAttr "Max_Rig_FKRN.phl[249]" "BaseCharacterSet.dnsm[135]";
+connectAttr "BaseCharacterSet.av[68]" "Max_Rig_FKRN.phl[250]";
+connectAttr "Max_Rig_FKRN.phl[251]" "BaseCharacterSet.dnsm[140]";
+connectAttr "BaseCharacterSet.av[73]" "Max_Rig_FKRN.phl[252]";
 connectAttr "Max_Rig_FKRN.phl[253]" "BaseCharacterSet.dnsm[139]";
 connectAttr "BaseCharacterSet.av[72]" "Max_Rig_FKRN.phl[254]";
-connectAttr "Max_Rig_FKRN.phl[255]" "BaseCharacterSet.dnsm[140]";
-connectAttr "BaseCharacterSet.av[73]" "Max_Rig_FKRN.phl[256]";
-connectAttr "Max_Rig_FKRN.phl[257]" "BaseCharacterSet.dnsm[141]";
-connectAttr "BaseCharacterSet.av[74]" "Max_Rig_FKRN.phl[258]";
+connectAttr "Max_Rig_FKRN.phl[255]" "BaseCharacterSet.dnsm[138]";
+connectAttr "BaseCharacterSet.av[71]" "Max_Rig_FKRN.phl[256]";
+connectAttr "Max_Rig_FKRN.phl[257]" "BaseCharacterSet.dnsm[143]";
+connectAttr "BaseCharacterSet.av[76]" "Max_Rig_FKRN.phl[258]";
 connectAttr "Max_Rig_FKRN.phl[259]" "BaseCharacterSet.dnsm[142]";
 connectAttr "BaseCharacterSet.av[75]" "Max_Rig_FKRN.phl[260]";
-connectAttr "Max_Rig_FKRN.phl[261]" "BaseCharacterSet.dnsm[143]";
-connectAttr "BaseCharacterSet.av[76]" "Max_Rig_FKRN.phl[262]";
+connectAttr "Max_Rig_FKRN.phl[261]" "BaseCharacterSet.dnsm[141]";
+connectAttr "BaseCharacterSet.av[74]" "Max_Rig_FKRN.phl[262]";
 connectAttr "Max_Rig_FKRN.phl[263]" "BaseCharacterSet.dnsm[144]";
 connectAttr "BaseCharacterSet.uv[42]" "Max_Rig_FKRN.phl[264]";
-connectAttr "Max_Rig_FKRN.phl[265]" "BaseCharacterSet.dnsm[148]";
-connectAttr "BaseCharacterSet.lv[28]" "Max_Rig_FKRN.phl[266]";
+connectAttr "Max_Rig_FKRN.phl[265]" "BaseCharacterSet.dnsm[150]";
+connectAttr "BaseCharacterSet.lv[30]" "Max_Rig_FKRN.phl[266]";
 connectAttr "Max_Rig_FKRN.phl[267]" "BaseCharacterSet.dnsm[149]";
 connectAttr "BaseCharacterSet.lv[29]" "Max_Rig_FKRN.phl[268]";
-connectAttr "Max_Rig_FKRN.phl[269]" "BaseCharacterSet.dnsm[150]";
-connectAttr "BaseCharacterSet.lv[30]" "Max_Rig_FKRN.phl[270]";
-connectAttr "Max_Rig_FKRN.phl[271]" "BaseCharacterSet.dnsm[145]";
-connectAttr "BaseCharacterSet.av[77]" "Max_Rig_FKRN.phl[272]";
+connectAttr "Max_Rig_FKRN.phl[269]" "BaseCharacterSet.dnsm[148]";
+connectAttr "BaseCharacterSet.lv[28]" "Max_Rig_FKRN.phl[270]";
+connectAttr "Max_Rig_FKRN.phl[271]" "BaseCharacterSet.dnsm[147]";
+connectAttr "BaseCharacterSet.av[79]" "Max_Rig_FKRN.phl[272]";
 connectAttr "Max_Rig_FKRN.phl[273]" "BaseCharacterSet.dnsm[146]";
 connectAttr "BaseCharacterSet.av[78]" "Max_Rig_FKRN.phl[274]";
-connectAttr "Max_Rig_FKRN.phl[275]" "BaseCharacterSet.dnsm[147]";
-connectAttr "BaseCharacterSet.av[79]" "Max_Rig_FKRN.phl[276]";
+connectAttr "Max_Rig_FKRN.phl[275]" "BaseCharacterSet.dnsm[145]";
+connectAttr "BaseCharacterSet.av[77]" "Max_Rig_FKRN.phl[276]";
 connectAttr "Max_Rig_FKRN.phl[277]" "BaseCharacterSet.dnsm[151]";
 connectAttr "BaseCharacterSet.uv[43]" "Max_Rig_FKRN.phl[278]";
-connectAttr "Max_Rig_FKRN.phl[279]" "BaseCharacterSet.dnsm[152]";
-connectAttr "BaseCharacterSet.av[80]" "Max_Rig_FKRN.phl[280]";
+connectAttr "Max_Rig_FKRN.phl[279]" "BaseCharacterSet.dnsm[154]";
+connectAttr "BaseCharacterSet.av[82]" "Max_Rig_FKRN.phl[280]";
 connectAttr "Max_Rig_FKRN.phl[281]" "BaseCharacterSet.dnsm[153]";
 connectAttr "BaseCharacterSet.av[81]" "Max_Rig_FKRN.phl[282]";
-connectAttr "Max_Rig_FKRN.phl[283]" "BaseCharacterSet.dnsm[154]";
-connectAttr "BaseCharacterSet.av[82]" "Max_Rig_FKRN.phl[284]";
+connectAttr "Max_Rig_FKRN.phl[283]" "BaseCharacterSet.dnsm[152]";
+connectAttr "BaseCharacterSet.av[80]" "Max_Rig_FKRN.phl[284]";
 connectAttr "Max_Rig_FKRN.phl[285]" "BaseCharacterSet.dnsm[122]";
 connectAttr "BaseCharacterSet.uv[41]" "Max_Rig_FKRN.phl[286]";
-connectAttr "Max_Rig_FKRN.phl[287]" "BaseCharacterSet.dnsm[123]";
-connectAttr "BaseCharacterSet.av[59]" "Max_Rig_FKRN.phl[288]";
+connectAttr "Max_Rig_FKRN.phl[287]" "BaseCharacterSet.dnsm[125]";
+connectAttr "BaseCharacterSet.av[61]" "Max_Rig_FKRN.phl[288]";
 connectAttr "Max_Rig_FKRN.phl[289]" "BaseCharacterSet.dnsm[124]";
 connectAttr "BaseCharacterSet.av[60]" "Max_Rig_FKRN.phl[290]";
-connectAttr "Max_Rig_FKRN.phl[291]" "BaseCharacterSet.dnsm[125]";
-connectAttr "BaseCharacterSet.av[61]" "Max_Rig_FKRN.phl[292]";
-connectAttr "Max_Rig_FKRN.phl[293]" "BaseCharacterSet.dnsm[126]";
-connectAttr "BaseCharacterSet.av[62]" "Max_Rig_FKRN.phl[294]";
+connectAttr "Max_Rig_FKRN.phl[291]" "BaseCharacterSet.dnsm[123]";
+connectAttr "BaseCharacterSet.av[59]" "Max_Rig_FKRN.phl[292]";
+connectAttr "Max_Rig_FKRN.phl[293]" "BaseCharacterSet.dnsm[128]";
+connectAttr "BaseCharacterSet.av[64]" "Max_Rig_FKRN.phl[294]";
 connectAttr "Max_Rig_FKRN.phl[295]" "BaseCharacterSet.dnsm[127]";
 connectAttr "BaseCharacterSet.av[63]" "Max_Rig_FKRN.phl[296]";
-connectAttr "Max_Rig_FKRN.phl[297]" "BaseCharacterSet.dnsm[128]";
-connectAttr "BaseCharacterSet.av[64]" "Max_Rig_FKRN.phl[298]";
-connectAttr "Max_Rig_FKRN.phl[299]" "BaseCharacterSet.dnsm[132]";
-connectAttr "BaseCharacterSet.lv[25]" "Max_Rig_FKRN.phl[300]";
+connectAttr "Max_Rig_FKRN.phl[297]" "BaseCharacterSet.dnsm[126]";
+connectAttr "BaseCharacterSet.av[62]" "Max_Rig_FKRN.phl[298]";
+connectAttr "Max_Rig_FKRN.phl[299]" "BaseCharacterSet.dnsm[134]";
+connectAttr "BaseCharacterSet.lv[27]" "Max_Rig_FKRN.phl[300]";
 connectAttr "Max_Rig_FKRN.phl[301]" "BaseCharacterSet.dnsm[133]";
 connectAttr "BaseCharacterSet.lv[26]" "Max_Rig_FKRN.phl[302]";
-connectAttr "Max_Rig_FKRN.phl[303]" "BaseCharacterSet.dnsm[134]";
-connectAttr "BaseCharacterSet.lv[27]" "Max_Rig_FKRN.phl[304]";
-connectAttr "Max_Rig_FKRN.phl[305]" "BaseCharacterSet.dnsm[129]";
-connectAttr "BaseCharacterSet.av[65]" "Max_Rig_FKRN.phl[306]";
+connectAttr "Max_Rig_FKRN.phl[303]" "BaseCharacterSet.dnsm[132]";
+connectAttr "BaseCharacterSet.lv[25]" "Max_Rig_FKRN.phl[304]";
+connectAttr "Max_Rig_FKRN.phl[305]" "BaseCharacterSet.dnsm[131]";
+connectAttr "BaseCharacterSet.av[67]" "Max_Rig_FKRN.phl[306]";
 connectAttr "Max_Rig_FKRN.phl[307]" "BaseCharacterSet.dnsm[130]";
 connectAttr "BaseCharacterSet.av[66]" "Max_Rig_FKRN.phl[308]";
-connectAttr "Max_Rig_FKRN.phl[309]" "BaseCharacterSet.dnsm[131]";
-connectAttr "BaseCharacterSet.av[67]" "Max_Rig_FKRN.phl[310]";
+connectAttr "Max_Rig_FKRN.phl[309]" "BaseCharacterSet.dnsm[129]";
+connectAttr "BaseCharacterSet.av[65]" "Max_Rig_FKRN.phl[310]";
 connectAttr "layer1.di" "pCube1.do";
 connectAttr "polyCube1.out" "pCubeShape1.i";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
