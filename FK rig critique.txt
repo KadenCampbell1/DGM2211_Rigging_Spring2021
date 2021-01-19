@@ -4,5 +4,6 @@ Gimble lock is very easy to achieve with the shoulder joints
 
 I like how quick and responsive the rig is.
 I like how clean the controls look. What I mean is there are not many cluddering up the model and they are where the joints bend.
+I really liked how it exported once you fixed it using the extra object in the outliner for the fk export and using the game export. I have never done that kind of export before.
 
 I am referencing the walk cycle from page 108.
