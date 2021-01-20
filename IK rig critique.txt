@@ -1,0 +1,9 @@
+The hand controls are too small
+I wish the elbow controls moved with the hand control.
+
+I love how the feet stay where they are when I move the body.
+I enjoy how fast animating with IK is.
+I like how the knee control moves with the foot control.
+
+
+I am referencing the walk cycle from page 108.
