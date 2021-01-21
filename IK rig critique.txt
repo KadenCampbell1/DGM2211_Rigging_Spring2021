@@ -1,5 +1,6 @@
 The hand controls are too small
 I wish the elbow controls moved with the hand control.
+The arms are harder to swing in nice arcs as compared to FK
 
 I love how the feet stay where they are when I move the body.
 I enjoy how fast animating with IK is.
